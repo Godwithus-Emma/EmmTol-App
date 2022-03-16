@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\images\" />
+  </ItemGroup>
+	<ItemGroup>
+		<!--<PackageReference Include="DelegateDecompiler" Version="0.28.0" />-->
+		<PackageReference Include="HarmonyX" Version="2.0.3.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.5" /> 
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="3.1.5" /> 
+		<PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="3.1.5" /> 
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.5" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.6.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyModel" Version="3.0.0" />
+		<PackageReference Include="System.Reactive.Linq" Version="4.4.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="LivingThing.Tools.LiveBlazor">
+	    <HintPath>..\..\..\..\LIVINGTHINGS\Libs\LivingThing.Tools.LiveBlazor.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+</Project>

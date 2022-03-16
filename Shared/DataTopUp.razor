@@ -1,0 +1,41 @@
+﻿
+@page "/DataTopUp"
+@layout MainLayout
+
+<Authentication Url="/DataTopUp">
+
+    <div class="data-topup">
+        <div class="content">
+        <span><strong>BUY DATA</strong></span>
+        <div class="form">
+            <EditForm Model=" new { }">
+                <select id="network" name="network" class="input1" @bind="SelectedNetwork">
+                    <option value="" disabled selected hidden>Choose Network</option>
+                    @foreach (var network in Networks)
+                    {
+                        <option value="@network">@network</option>
+                    }
+                </select>
+                <select id="amount" name="amount" class="input1" @bind="SelectedAmount">
+                    <option value="" disabled selected hidden>Choose Plan</option>
+
+                    @foreach (var p in Plans[SelectedNetwork])
+                    {
+                        <option value="@p.DataVolume">@p.DataVolume --N @p.Amount </option>
+                    }
+                </select>
+                <input type="tel" class="phone-number" name="number" maxlength="11" placeholder="Input Phone Number" @bind-value="PhoneNumber">
+                <button class="submit" @onclick="Submit" type="submit">
+                    <i class=@($"{(processing? "mdi mdi-loading mdi-spin":"hide")}")></i>
+                   @(processing? "" : "Buy")
+                </button>
+            </EditForm>
+            <Notice @ref="_notice"></Notice>
+
+        </div>
+    </div>
+
+
+    </div>
+</Authentication>
+

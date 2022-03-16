@@ -1,0 +1,97 @@
+﻿@import "../wwwroot/css/stylings.scss";
+
+.nav-bar {
+    margin: auto;
+    background-color: $thick-border;
+    color: white;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+
+    .pos {
+        position: relative;
+
+        #backbtn {
+            float: left;
+            margin-top: 8px;
+            font-size: 30px;
+        }
+
+        em {
+            font-size: 25px;
+            font-family: cursive;
+            display: inline-block;
+            text-align: left !important;
+            margin: 4px 5px;
+            float: left;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        span {
+            float: right;
+            display: inline-block;
+
+            i {
+                font-size: 40px;
+                float: right;
+                padding-right: 10px;
+                cursor: pointer;
+            }
+
+            &:focus-within {
+                .nav {
+                    top: 0;
+                    // height: 138px;
+                    // opacity: 1;
+                }
+            }
+
+            .nav {
+                position: absolute;
+                width: 100vw;
+                margin: 0;
+                box-sizing: border-box;
+                text-align: center;
+                left: 0;
+                top: 100%;
+                background-color: #f6eaff;
+                transition: all .8s cubic-bezier(.48,-0.28,.41,1.4);
+                top: -150px;
+                overflow: hidden;
+                padding: 20px 0 0 0;
+
+
+                .links {
+                    padding: 5px 0;
+                    width: 100%;
+
+
+
+                    li {
+                        list-style: none;
+                        margin-bottom: 10px;
+                        line-height: 1.1;
+                        font-size: 20px;
+                        font-weight: bold;
+
+                        a {
+                            text-decoration: none;
+                            color: $thick-border;
+                            padding: 5px 10px;
+
+                            &:hover {
+                                background: none;
+                                border: 1px solid $thick-border;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

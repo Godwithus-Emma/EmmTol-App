@@ -1,0 +1,26 @@
+﻿@import "../wwwroot/css/stylings.scss"
+.wrapper
+{
+    background-color: green;
+    height: 100vh;
+    width: 100vw;
+    // text-align: center;
+    display: flex;
+
+    .content {
+        margin: auto;
+        padding: 10px !important;
+        $min: "min(90vw, 480px)";
+        width: unquote($min);
+        $rgb: "rgb(218 204 255 / 22%)";
+        background: unquote($rgb);
+        box-shadow: 1px 0px 10px black;
+        text-align: center;
+
+        input {
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+    }
+}
+

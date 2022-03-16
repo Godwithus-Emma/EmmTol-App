@@ -1,0 +1,111 @@
+﻿
+@import "../wwwroot/css/stylings.scss";
+// .use-fade{
+//   opacity: 0;
+//   transition: opacity linear 1s;
+// }
+// .fade-in{
+//   opacity: 1;
+// }
+
+
+
+.login-wrapper {
+    background-color: $thick-border;
+    height: 100vh;
+    width: 100vw;
+    // text-align: center;
+    display: flex;
+
+    #loading {
+        height: 100vh;
+        width: 100%;
+        background: #e0d4ff;
+        display: flex;
+
+        i {
+            margin: auto;
+            font-size: 120px;
+            color: white;
+        }
+    }
+
+    #loading.hide, .hide {
+        display: none;
+    }
+
+
+    .content {
+        margin: auto;
+        padding: 10px !important;
+        $min: "min(90vw, 480px)";
+        width: unquote($min);
+        $rgb: "rgb(218 204 255 / 22%)";
+        background: unquote($rgb);
+        box-shadow: 1px 0px 10px black;
+        text-align: center;
+
+        > span {
+            color: white;
+            font-size: 30px;
+            font-family: cursive;
+            letter-spacing: 5px;
+        }
+
+        .input {
+            box-sizing: border-box;
+            font-size: 14px;
+            // border: none!important;
+        }
+
+        #email {
+            &:invalid {
+                border: 1px solid red;
+            }
+            // &:valid{
+            //   border: 1px solid $thick-border;
+            // }
+        }
+
+        .remember {
+            display: block;
+            text-align: left;
+
+            .checkbox {
+                box-shadow: none !important;
+                width: 12px;
+                display: inline-block;
+                height: 25px;
+            }
+
+            > span {
+                font-size: 12px;
+                color: $light-background;
+                vertical-align: super;
+            }
+        }
+        // .submit{
+        //   background-color: $btn;
+        //   color: $thick-border;
+        //   font-size: 15px;
+        //   margin: 10px!important;
+        //   // margin-top: -20px;
+        // }
+    }
+
+    .other-content {
+        display: block;
+
+        > span a {
+            color: $primary-color;
+            font-size: 12px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// }

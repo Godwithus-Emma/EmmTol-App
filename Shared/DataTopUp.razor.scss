@@ -1,0 +1,67 @@
+﻿@import "../wwwroot/css/stylings.scss";
+
+
+
+@media screen and (min-width:481px){
+    .content span {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .content span {
+        font-size: 30px;
+    }
+}
+
+html {
+    background-color: black;
+}
+.data-topup {
+    background: $thick-border;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    .content {
+        margin: auto;
+        padding: 10px;
+        $min: "min(90vw, 480px)";
+        width: unquote($min);
+        box-shadow: 1px 0px 10px black;
+        text-align: center;
+
+        > span {
+            color: white;
+            font-weight: bolder;
+        }
+
+
+        .form {
+            text-align: center;
+            margin: auto;
+
+            .input1 {
+                padding: 12px;
+                text-align-last: center;
+                margin: auto;
+                margin-top: 15px;
+                box-sizing: border-box;
+                width: 100%;
+                font-size: 14px;
+                border-radius: 4px;
+                background-color: white;
+            }
+
+            .phone-number {
+            }
+
+            .submit {
+                font-size: 25px;
+
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+﻿@inherits LayoutComponentBase
+
+<div>
+    <TopNav @key="Navigation.Uri" />
+    @Body
+</div>
+
+
+@code{
+    [Inject] public NavigationManager Navigation { get; set; }
+}

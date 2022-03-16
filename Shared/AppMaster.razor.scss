@@ -1,0 +1,99 @@
+﻿
+@import "../wwwroot/css/stylings.scss";
+@keyframes wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+    }
+
+    15% {
+        transform: rotateZ(-15deg);
+    }
+
+    20% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    30% {
+        transform: rotateZ(6deg);
+    }
+
+    35% {
+        transform: rotateZ(-4deg);
+    }
+
+    40%, 100% {
+        transform: rotateZ(0);
+    }
+}
+
+.wrapper {
+    background: blue;
+    //.footer {
+        .links-btn {
+            position: fixed;
+            bottom: 0%;
+            right: 0%;
+            color: white;
+            margin: 0 5px 5px 0;
+            overflow: hidden;
+            cursor: pointer;
+
+             span {
+                display: inline-block;
+                animation: wiggle 3s linear;
+
+                span {
+                    display: inline-block;
+                    background-color: $thick-border;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+            }
+
+            &:focus-within {
+                .links {
+                    display: inline-block;
+                    width: 100vw;
+                }
+
+                > span {
+                    > span {
+                        display: none;
+                    }
+                }
+            }
+
+            .quick-links {
+            }
+
+            .links {
+                width: 0;
+                overflow: hidden;
+                transition: width ease-in 0.5s;
+                display: inline-block;
+                text-align: center;
+
+                > div {
+                    display: inline-block;
+                    white-space: nowrap;
+
+                    a {
+                        margin: 5px;
+                        padding: 10px;
+                        background-color: blueviolet;
+                        color: white;
+                        text-decoration: none;
+                        white-space: nowrap;
+                        border-radius: 5px;
+                        box-shadow: 0 5px 5px rgb(218, 216, 216);
+                        display: inline-block;
+                    }
+                }
+            }
+       // }
+    }
+}

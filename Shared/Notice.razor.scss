@@ -1,0 +1,14 @@
+﻿@import "../wwwroot/css/stylings.scss";
+
+div {
+    margin-top: -10px;
+    height: 20px;
+    .success {
+        color: greenyellow;
+    }
+    .error {
+        color: #fac304;
+    }
+}
+
+

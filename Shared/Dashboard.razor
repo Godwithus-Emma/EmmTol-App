@@ -1,0 +1,108 @@
+﻿@page "/Dashboard"
+@layout PrimaryLayout
+
+
+    <main>
+        <Authentication Url="/Dashboard">
+            <div id="wrapper">
+                <div  class="@( (toggle ? "toggle" : "details"))">
+                    <div class="top-bar"><div @onclick="ToggleBar" id=" ïcon" ><i class="mdi mdi-menu"></i></div>
+                    <div class="balance">₦ @Balance</div></div>
+                    <div class="links">
+                        <img src="/css/images/dp.png"/>
+                        <h5>@Name</h5>
+                        <span>@Email</span>
+                        <h4>@Title.ToUpper()</h4>
+                        <ul >
+                            <NavLink href="/"><li><i class="mdi mdi-account-edit"></i>Main Menu</li></NavLink>
+                            <NavLink href="/DataTopUp"> <li><i class="mdi mdi-account-edit"></i>Data Top Up</li></NavLink>
+                            <NavLink href="/FundWallet"><li><i class="mdi mdi-account-edit"></i>Fund Wallet</li></NavLink>
+                            <li @onclick=" Uservice.Logout"><i class="mdi mdi-account-edit"></i>Exit</li>
+
+                        </ul>
+                    </div>
+                    <div class="transaction">
+                        <h3>Transactions</h3>
+                        <div class="history-table">
+                            <!--<table>
+                <thead>
+                    @foreach(var column in Header) { }
+                    <tr>
+                        <th>-->
+                            @*@column*@
+
+                            <!--</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of rows">
+                            <td *ngFor="let column of headers">
+                                {{getValue(row, column)}}
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </Authentication>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @*<div class="content">
+            <div class="balance"><span>@Balance</span></div>
+            <div class="dashboard">
+                <h2>@Title</h2>
+            </div>
+            <div class="account-link">
+                <img src="../wwwroot/css/images/dp.png" width="30px" height="30px" alt="dp">
+                <span></span>
+            </div>
+
+            <div class="welcome">Welcome!!!</div>
+
+            <div class="message">
+                <span>You can now fund your wallet to begin...</span>
+            </div>
+
+            <div class="transaction">
+                <h3>Transactions</h3>
+                <div class="history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th *ngFor="let column of headers">
+                                    {{column}}
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let row of rows">
+                                <td *ngFor="let column of headers">
+                                    {{getValue(row, column)}}
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>*@
+    </main>
+    <app-master></app-master>

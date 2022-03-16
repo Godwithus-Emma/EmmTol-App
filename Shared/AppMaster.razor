@@ -1,0 +1,17 @@
+﻿<div class="wrapper">
+    <div class="links-btn">
+        <span tabindex="-1">
+            <span>
+                Quick Links
+            </span>
+        </span>
+        <div class="links">
+            <div>
+                @foreach (var a in Links)
+                {
+                    <NavLink href="@($"/{a.Address}")">@a.Label.ToUpper()</NavLink>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿<div class="nav-bar">
+    <div class="pos">
+        <i id="backbtn" @onclick="Back" class="mdi mdi-chevron-left"></i>
+        <em> <NavLink href="/">EmmTol</NavLink></em>
+        <span @onclick="Switchbtn" tabindex="-1">
+            <i class="mdi mdi-menu"></i>
+            <div class="nav">
+                <ul class="links">
+                    <li><NavLink href="/">Home</NavLink></li>
+                    @if (loggedIn)
+                    {
+                        <li><NavLink href="/Dashboard">Dashboard</NavLink></li>
+                        <li><NavLink href="/LogOut">LogOut</NavLink></li>
+                    }
+                    else
+                    {
+                        <li><NavLink href="/Login">Login</NavLink></li>
+                        <li><NavLink href="/Register">Register</NavLink></li>
+                    }
+                    @*@if (Links != null)
+                    {
+                        @foreach (var a in Links)
+                        {
+                            <li><NavLink href="@($"/{a.Address}")">@a.Label.ToUpper()</NavLink></li>
+                        }
+                    }*@
+                </ul>
+            </div>
+        </span>
+        <div class="clr"></div>
+    </div>
+</div>
+@*<ng-content select='main'></ng-content>*@

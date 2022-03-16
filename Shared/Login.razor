@@ -1,0 +1,31 @@
+﻿@page "/Login"
+
+<div class="login-wrapper">
+    <div id ="loading" class=@($"{(loading? "": "hide")}")><i class= "mdi mdi-loading mdi-spin"> </i></div>
+        <div class=@($"{(loading? "hide": "content")}")>
+            <span>WELCOME BACK!</span>
+            <EditForm Model="new { }">
+
+                <input name="email" class="input" id="email" type="text" @bind-value="Email" placeholder="Enter your email">
+
+                <input name="pass" class="input" type="password" @bind-value="Password" placeholder="Enter your password">
+                <div class="remember">
+                    <input class="checkbox" type="checkbox"><span>Remember me</span>
+                </div>
+                <button class="submit" type="submit" @onclick="UserLogin"><strong>LOGIN</strong></button>
+            </EditForm>
+            <hr>
+
+            <Notice @ref="_notice"></Notice>
+            @*<div style="color: #fac304; margin-top:-10px; height:20px;" class="@($"err use-fade {(FadeIn ? "fade-in" : "")}")"><span>@Notification</span></div>*@
+
+            <div class="other-content">
+
+                <span>
+                    <NavLink href="/RecoverPassword">Forgot Password</NavLink> or
+                    <NavLink href="/Register">Register</NavLink>
+                </span>
+            </div>
+        </div>
+    </div>
+

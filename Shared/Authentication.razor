@@ -1,0 +1,21 @@
+﻿
+@if (!_checked)
+{
+
+}
+else
+{
+if (loggedIn == true)
+{
+    @ChildContent
+}
+
+else
+{
+    <Login OnLoggedIn="LoggedIn" Url=@Url></Login>
+}
+}
+
+
+
+

@@ -1,0 +1,19 @@
+﻿@page "/RecoverPassword"
+<div class="wrapper">
+    <div class="content">
+
+        <span>@Title!</span>
+        <EditForm Model="new { }">
+
+            <input name="email" class="input" id="email" type="text" @bind-value= "Email"
+                   placeholder="Enter your email">
+            <button class="submit" type="submit" @onclick="Recover"><strong>@Title</strong></button>
+        </EditForm>
+        <Notice @ref="_notice"></Notice>
+        @*<div *ngIf="error||success">*@
+            @*<hr>
+        </div>
+        <div *ngIf="error" style="color: #fac304;" class="error">{{error}}</div>
+        <div *ngIf="success" style="color: #09ff00;" class="success">{{success}}</div>*@
+    </div>
+</div>
